@@ -22,15 +22,32 @@ namespace Library
 
         public AppointmentService(string name, byte age, string id, string phoneNumber, DateTime date, string appointmentPlace, string doctorName, string doctorSpecialty)
         {
-            // ID validation (ids can't be empty)
-            if(id.Length == 0) throw new ArgumentException("Ids can't be empty");
+            // Name validation (avoid null and empty cases)
+            if(name == null || name.Length == 0) throw new ArgumentException("A name is required");
+
+            // ID validation (avoid null and empty cases)
+            if(id == null || id.Length == 0) throw new ArgumentException("Id is required");
             // ID validation (ids must be different from one another)
             if(ids.Contains(id)) throw new ArgumentException($"There's already an appointment with the id \"{id}\"");
 
+            // Phone number validation (avoid null and empty cases)
+            if(phoneNumber == null || phoneNumber.Length == 0) throw new ArgumentException("Phone number is required");
             // Phone number validation (it has to have 10 digits)
             if(phoneNumber.Where(c => Char.IsDigit(c)).Count() != 10)
                 throw new ArgumentException($"A phone number must have 10 digits");
+            
+            // Date validation (avoid null case)
+            if(date == null) throw new ArgumentException("Date is required");
+            
+            // Appointment place validation (avoid null and empty cases)
+            if(appointmentPlace == null || appointmentPlace.Length == 0) throw new ArgumentException("Appointment place is required");
+            
+            // Doctor name validation (avoid null case)
+            if(doctorName == null || doctorName.Length == 0) throw new ArgumentException("Doctor name is required");
 
+            // Doctor specialty validation (avoid null and empty cases)
+            if(doctorSpecialty == null || doctorSpecialty.Length == 0) throw new ArgumentException("Doctor specialty is required");
+            
             this.Name = name;
             this.Age = age;
             this.Id = id;
