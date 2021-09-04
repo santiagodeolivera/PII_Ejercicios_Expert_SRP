@@ -7,11 +7,11 @@ namespace Program
     {
         static void Main(string[] args)
         {
-            AppointmentService appointment1 = new AppointmentService("Steven Jhonson", 30, "986782342", "5555-555-555", DateTime.Now, "Wall Street", "Armand", "Médico");
-            Console.WriteLine(appointment1.ToText());
+            string appointmentResult = AppointmentService.CreateAppointment("Steven Jhonson", "986782342", "5555-555-555", DateTime.Now, "Wall Street", "Armand");
+            Console.WriteLine(appointmentResult);
 
-            AppointmentService appointment2 = new AppointmentService("Ralf Manson", 20, "", "5555-555-555", DateTime.Now, "Queen Street", "", "Médico");
-            Console.WriteLine(appointment2.ToText());
+            string appointmentResult2 = AppointmentService.CreateAppointment("Ralf Manson", "", "5555-555-555", DateTime.Now, "Queen Street", "");
+            Console.WriteLine(appointmentResult2);
         }
     }
 }

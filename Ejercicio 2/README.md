@@ -11,7 +11,7 @@ especifícamente se nos pide que hagamos mantenimiento de la funcionalidad de co
 1. Se podrían agregar otros datos del paciente como por ejemplo su edad.
 2. Se podrían agregar otros datos al Doctor como por ejemplo su especialidad.
 3. La consulta debe tener un identificador único
-4. Cada dato que se ingrese al sistema debe ser validado.
+4. Cada dato que se ingrese al sistema debe ser válidado.
 
 Para el ejercicio se pide
 
