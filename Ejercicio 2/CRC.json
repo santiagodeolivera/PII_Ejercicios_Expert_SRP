@@ -1,0 +1,15 @@
+[
+  {
+    "name": "AppointmentService",
+    "superclasses": "",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "Store data about an appointment (name of patient, age of patient, id of appointment, phone number of patient, date, name of doctor, and specialty of doctor)",
+      "Generate a string which informs about whether the appointment can be scheduled"
+    ],
+    "collaborators": [
+      ""
+    ]
+  }
+]
