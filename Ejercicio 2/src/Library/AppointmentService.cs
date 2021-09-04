@@ -23,7 +23,7 @@ namespace Library
         public AppointmentService(string name, byte age, string id, string phoneNumber, DateTime date, string appointmentPlace, string doctorName, string doctorSpecialty)
         {
             // ID validation (ids can't be empty)
-            if(id.Length == 0) throw new ArgumentException($"Ids can't be empty");
+            if(id.Length == 0) throw new ArgumentException("Ids can't be empty");
             // ID validation (ids must be different from one another)
             if(ids.Contains(id)) throw new ArgumentException($"There's already an appointment with the id \"{id}\"");
 
@@ -31,7 +31,7 @@ namespace Library
             if(phoneNumber.Where(c => Char.IsDigit(c)).Count() != 10)
                 throw new ArgumentException($"A phone number must have 10 digits");
 
-            this.Name = Name;
+            this.Name = name;
             this.Age = age;
             this.Id = id;
             ids.Add(id);
