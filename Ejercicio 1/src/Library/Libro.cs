@@ -9,8 +9,8 @@ namespace SRP
         public string Autor { get ; }
         public string Codigo { get ;  }
 
-        // ERROR: El libro no debe tener la responsabilidad
-        // de almacenar información sobre su misma ubicación
+        // El libro no debe tener la responsabilidad de almacenar información sobre su misma ubicación.
+        // En su lugar, se crean clases asociadas a la jerarquía de la ubicación de un libro
 
         public Libro(String titulo, String autor, String codigo)
         {
