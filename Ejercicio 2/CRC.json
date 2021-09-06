@@ -1,15 +1,43 @@
 [
   {
+    "name": "Patient",
+    "superclasses": "",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "Store information about the patient (name, age, id, phone number)",
+      "Validate information about the patient"
+    ],
+    "collaborators": [
+      ""
+    ]
+  },
+  {
+    "name": "Doctor",
+    "superclasses": "",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "Store data about the doctor (name, specialty)",
+      "Validate the data about the doctor"
+    ],
+    "collaborators": [
+      ""
+    ]
+  },
+  {
     "name": "AppointmentService",
     "superclasses": "",
     "subclasses": "",
     "type": 1,
     "responsibilities": [
-      "Store data about an appointment (name of patient, age of patient, id of appointment, phone number of patient, date, name of doctor, and specialty of doctor)",
+      "Store data about an appointment (patient, date, name of doctor, and specialty of doctor)",
+      "Validate data about the appointment",
       "Generate a string which informs about whether the appointment can be scheduled"
     ],
     "collaborators": [
-      ""
+      "Patient",
+      "Doctor"
     ]
   }
 ]
