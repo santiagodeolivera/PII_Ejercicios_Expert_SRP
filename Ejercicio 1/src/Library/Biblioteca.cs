@@ -16,7 +16,7 @@ namespace SRP
 
 		public bool AñadirSector(string nuevoSector)
 		{
-			// Si hay, al menos, un sector con el mismo nombre, se cancela el método
+			// Si hay, al menos, un sector con el mismo nombre, el método no hace nada
 			if (sectores.Any(e => e.Nombre == nuevoSector)) return false;
 
 			sectores.Add(new Sector(nuevoSector));

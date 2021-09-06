@@ -16,7 +16,7 @@ namespace SRP
 
 		public bool AñadirEstante(string nuevoEstante)
 		{
-			// Si hay, al menos, un estante con el mismo nombre, se cancela el método
+			// Si hay, al menos, un estante con el mismo nombre, el método no hace nada
 			if (estantes.Any(e => e.Nombre == nuevoEstante)) return false;
 
 			estantes.Add(new Estante(nuevoEstante));
